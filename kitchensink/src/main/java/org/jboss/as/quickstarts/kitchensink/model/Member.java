@@ -40,7 +40,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Member implements Serializable {
 
     @Id
-    @GeneratedValue
+    //@GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // for PostgreSQL
     private Long id;
 
     @NotNull
